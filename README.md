@@ -1,8 +1,6 @@
 # BlogApi
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/blog_api`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Ruby wrapper for the API of my personal [blog](https://github.com/K-Sato1995/blog_backend).
 
 ## Installation
 
@@ -14,15 +12,32 @@ gem 'blog_api'
 
 And then execute:
 
-    $ bundle
+```
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install blog_api
+```
+$ gem install blog_api
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+The examples are listed below.
+
+```ruby
+# Get all the categories.
+BlogApi::Category.all
+# Get all the tags.
+BlogApi::Tag.all
+# Get all the posts.
+BlogApi::Post.all
+# Get a specific post.
+BlogApi::Post.post(post_id)
+# Get all the featured posts.
+BlogApi::Post.featured
+```
 
 ## Development
 
