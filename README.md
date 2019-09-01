@@ -7,7 +7,7 @@ Ruby wrapper for the API of my personal [blog](https://github.com/K-Sato1995/blo
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'k_sato_blog_api'
+gem 'blog_api'
 ```
 
 And then execute:

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    k_sato_blog_api (1.0.0)
+    blog_api (1.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -33,9 +33,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  blog_api!
   bundler (~> 1.16)
   httparty
-  k_sato_blog_api!
   rake (~> 10.0)
   rspec (~> 3.0)
 
