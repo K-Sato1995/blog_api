@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    blog_api (0.1.0)
+    blog_api (1.0.0)
 
 GEM
   remote: https://rubygems.org/
