@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "blog_api/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "blog_api"
+  spec.name          = "k_sato_blog_api"
   spec.version       = BlogApi::VERSION
   spec.authors       = ["Katsuki"]
   spec.email         = ["Katsuki_Sato0130@icloud.com"]
