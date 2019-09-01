@@ -1,3 +1,3 @@
 require_relative '../lib/blog_api'
 
-p BlogApi::Category.all
+p BlogApi::Post.featured
