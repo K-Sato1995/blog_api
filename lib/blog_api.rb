@@ -1,5 +1,5 @@
-require "blog_api/version"
-
-module BlogApi
-  # Your code goes here...
-end
+require './lib/blog_api/version'
+require './lib/blog_api/request'
+require './lib/blog_api/post'
+require './lib/blog_api/category'
+require './lib/blog_api/tag'
