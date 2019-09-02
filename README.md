@@ -28,15 +28,15 @@ The examples are listed below.
 
 ```ruby
 # Get all the categories.
-BlogApi::Category.all
+BlogApi.categories
 # Get all the tags.
-BlogApi::Tag.all
+BlogApi.tags
 # Get all the posts.
-BlogApi::Post.all
+BlogApi.posts
 # Get a specific post.
-BlogApi::Post.post(post_id)
+BlogApi.post(post_id)
 # Get all the featured posts.
-BlogApi::Post.featured
+BlogApi.featured_posts
 ```
 
 ## Development
