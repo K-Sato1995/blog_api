@@ -1,6 +1,6 @@
-require './lib/blog_api/version'
-require './lib/blog_api/client'
-require './lib/blog_api/configuration'
+require_relative 'blog_api/version'
+require_relative 'blog_api/client'
+require_relative 'blog_api/configuration'
 
 module BlogApi
   attr_accessor :configuration
