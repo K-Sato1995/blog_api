@@ -1,29 +1,43 @@
 require 'httparty'
-require 'json'
-require_relative './configuration'
+require_relative './response'
 
 module BlogApi
   class Client
     class RequestError < StandardError; end
-    attr_reader :configuration
+    DEFAULT_URL = 'https://k-blog0130.herokuapp.com/api/v2/'
+    attr_reader :base_url
 
-    def initialize(configuration)
-      @configuration = configuration
+    def initialize(base_url = DEFAULT_URL)
+      @base_url = base_url
     end
 
     def get(path, options: { format: :plain })
-      url = "#{configuration.base_url}/#{path}"
+      url = "#{base_url}/#{path}"
       result = HTTParty.get(url, options)
 
       raise RequestError unless result.response.code == '200'
 
-      json_parse(result)
+      BlogApi::Response.new(result)
+    end
+    
+    def categories
+      get('categories').parsed_body
     end
 
-    private
+    def posts
+      get('posts').parsed_body
+    end
 
-    def json_parse(result, options: { symbolize_names: true })
-      JSON.parse(result, options)
+    def post(post_id)
+      get("posts/#{post_id}").parsed_body
+    end
+
+    def featured_posts
+      get("featured_posts").parsed_body
+    end
+
+    def tags
+      get("tags").parsed_body
     end
   end
 end
