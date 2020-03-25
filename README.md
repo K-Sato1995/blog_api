@@ -27,16 +27,17 @@ $ gem install blog_api
 The examples are listed below.
 
 ```ruby
-# Get all the categories.
-BlogApi.categories
-# Get all the tags.
-BlogApi.tags
-# Get all the posts.
-BlogApi.posts
-# Get a specific post.
-BlogApi.post(post_id)
-# Get all the featured posts.
-BlogApi.featured_posts
+client = BlogApi::Client.new
+# Get all categories
+client.categories
+# Get all posts
+client.posts
+# Get a specific post
+client.post(2)
+# Get all the featured_posts
+client.featured_posts
+# Get all tags
+client.tags
 ```
 
 ## Development
